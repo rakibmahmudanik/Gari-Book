@@ -76,7 +76,7 @@ export default function States() {
               <div className="text-4xl! sm:text-3xl font-bold text-accent">
                 {formatNumber(tripRequests)}+
               </div>
-              <div className="text-xl! sm:text-sm text-white font-medium mt-1">
+              <div className="text-2xl! sm:text-sm text-white font-medium mt-1">
                 Trip Requests
               </div>
             </div>
@@ -85,7 +85,7 @@ export default function States() {
               <div className="text-4xl! sm:text-3xl font-bold text-accent">
                 {formatNumber(totalCustomers)}+
               </div>
-              <div className="text-xl! sm:text-sm text-white font-medium mt-1">
+              <div className="text-2xl! sm:text-sm text-white font-medium mt-1">
                 Total Customers
               </div>
             </div>
@@ -94,7 +94,7 @@ export default function States() {
               <div className="text-4xl! sm:text-3xl font-bold text-accent">
                 {formatNumber(activeDrivers)}+
               </div>
-              <div className="text-xl! sm:text-sm text-white font-medium mt-1">
+              <div className="text-2xl! sm:text-sm text-white font-medium mt-1">
                 Active Drivers
               </div>
             </div>
@@ -103,7 +103,7 @@ export default function States() {
               <div className="text-4xl! sm:text-3xl font-bold text-accent">
                 {districts}
               </div>
-              <div className="text-xl! sm:text-sm text-white font-medium mt-1">
+              <div className="text-2xl! sm:text-sm text-white font-medium mt-1">
                 District Covered
               </div>
             </div>
