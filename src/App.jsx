@@ -5,6 +5,7 @@ import HeroSection from "./components/HeroSection";
 import MoreThanMilesSection from "./components/MoreThanMilesSection";
 import Navbar from "./components/Navbar";
 import ServicesSection from "./components/ServicesSection";
+import SmartDriverSection from "./components/SmartDriverSection";
 import States from "./components/States";
 // import "./index.css";
 
@@ -20,6 +21,7 @@ function App() {
         <FreedomJourneySection />
         <MoreThanMilesSection />
         <BookingToArrivalSection />
+        <SmartDriverSection />
       </main>
     </>
   );

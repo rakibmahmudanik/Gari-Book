@@ -47,8 +47,7 @@ export default function BookingToArrivalSection() {
           </h2>
           <Button>
             <span className="flex items-center gap-2 text-2xl">
-              <span>Download</span>{" "}
-              <FaArrowRight className="text-sm text-2xl" />
+              <span>Download</span> <FaArrowRight className=" text-2xl" />
             </span>
           </Button>
         </div>
@@ -66,7 +65,7 @@ export default function BookingToArrivalSection() {
                 className={`${spanClass} rounded-2xl overflow-hidden shadow-lg transition-transform duration-300 bg-[#0b132b]/50 border border-slate-800`}
               >
                 {/* Image Container with full coverage */}
-                <div className="w-full h-72 sm:h-[400px] flex items-center justify-center">
+                <div className="w-full h-72 sm:h-100 flex items-center justify-center">
                   <img
                     src={item.image}
                     alt="Bento Grid Feature"

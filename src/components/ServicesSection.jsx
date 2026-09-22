@@ -93,7 +93,7 @@ export default function ServicesSection() {
                     key={index}
                     onMouseEnter={() => setHoveredIndex(index)}
                     onMouseLeave={() => setHoveredIndex(null)}
-                    className={`relative rounded-xl p-10 flex flex-col justify-center overflow-hidden shadow-sm transition-all duration-300 min-h-[300px] ${
+                    className={`relative rounded-xl p-10 flex flex-col justify-center overflow-hidden shadow-sm transition-all duration-300 min-h-75 ${
                       isCardActive
                         ? "bg-primary text-primary-foreground shadow-xl"
                         : "bg-muted/50 text-foreground hover:shadow-xl"
