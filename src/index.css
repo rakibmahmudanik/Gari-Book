@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-accent: var(--accent);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+}
+
+@layer base {
+  :root {
+    --background: #ffffff;
+    --foreground: #010816;
+    --primary: #0f51ff;
+    --primary-foreground: #f7f9fb;
+    --accent: #f9cb14;
+    --muted: #f1f5f9;
+    --muted-foreground: #64748b;
+    --border: #e2e8f0;
+  }
+
+  .dark {
+    --background: #010816;
+    --foreground: #f7f9fb;
+    --primary: #0f51ff;
+    --primary-foreground: #0f172a;
+    --accent: #f9cb14;
+    --muted: #1e293b;
+    --muted-foreground: #94a3b7;
+    --border: #1e293b;
+  }
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Center-expanding underline & color transform */
+.garibook-nav-link {
+  position: relative;
+  display: inline-block;
+  transition: color 0.5s ease;
+}
+
+.garibook-nav-link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 3px;
+  bottom: -6px;
+  left: 0;
+  background-color: var(--primary);
+  transform-origin: center;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.garibook-nav-link:hover::after,
+.garibook-nav-link.active::after {
+  transform: scaleX(1);
+}
+
+.garibook-nav-link:hover {
+  color: var(--primary);
+}
