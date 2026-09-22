@@ -37,6 +37,23 @@
   }
 }
 
+@keyframes cityScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-city-scroll {
+  animation: cityScroll 20s linear infinite;
+}
+
+.animate-car-drive {
+  animation: carBounce 0.4s ease-in-out infinite;
+}
+
 body {
   background-color: var(--background);
   color: var(--foreground);

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { MdTranslate } from "react-icons/md";
 import logoImage from "../assets/gaibook-logo-icon.svg";
 import "../index.css";
+import Button from "./ui/Button";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -36,11 +37,11 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="sticky top-0 z-50 w-full bg-background text-foreground border-b border-border shadow-sm transition-colors duration-200">
+      <header className=" w-full bg-background text-foreground border-b border-border shadow-sm transition-colors duration-200">
         <div className="flex justify-end">
           <button
             onClick={() => setIsActive(!isActive)}
-            className="px-3 py-2 mt-2 mr-2 rounded-lg bg-primary text-background font-semibold hover:bg-primary/90 active:scale-95 transition-all duration-200"
+            className="hidden lg:flex px-4 py-2 mt-2 mr-2 rounded-lg bg-primary text-background font-semibold hover:bg-primary/90 active:scale-95 transition-all duration-200"
           >
             <div className="flex items-center gap-2">
               <span>
@@ -130,12 +131,7 @@ export default function Navbar() {
                 )}
               </button>
 
-              <button
-                onClick={() => console.log("Login clicked")}
-                className="px-6 py-2.5 rounded-lg bg-primary text-primary-foreground font-semibold shadow-lg shadow-primary/25 hover:bg-primary/90 active:scale-95 transition-all duration-200"
-              >
-                login
-              </button>
+              <Button>Login</Button>
             </div>
 
             {/* Mobile Menu & Theme Toggle */}
@@ -203,8 +199,21 @@ export default function Navbar() {
         {mobileMenuOpen && (
           <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm lg:hidden flex justify-end">
             <div className="w-4/5 max-w-sm bg-background border-l border-border h-full p-6 flex flex-col justify-between shadow-2xl">
-              <div>
-                <div className="flex items-center justify-between pb-6 border-b border-border">
+              <div className="">
+                <div className="flex justify-end">
+                  <button
+                    onClick={() => setIsActive(!isActive)}
+                    className="flex md:hidden  px-3 py-2 mt-2 mr-2 rounded-lg bg-primary text-background font-semibold hover:bg-primary/90 active:scale-95 transition-all duration-200"
+                  >
+                    <div className="flex items-center gap-2">
+                      <span>
+                        <MdTranslate size={20} />
+                      </span>
+                      <span>{isActive ? "বাংলা" : "English"}</span>
+                    </div>
+                  </button>
+                </div>
+                <div className="flex items-center justify-between pb-6 mt-6 border-b border-border">
                   <div className="flex items-center space-x-3">
                     <a href="#" className="flex items-center gap-2">
                       <img
@@ -261,15 +270,7 @@ export default function Navbar() {
               </div>
 
               <div className="pt-6 border-t border-border">
-                <button
-                  onClick={() => {
-                    setMobileMenuOpen(false);
-                    console.log("Login clicked");
-                  }}
-                  className="w-full py-3 rounded-xl bg-primary text-primary-foreground font-semibold shadow-lg text-center"
-                >
-                  login
-                </button>
+                <Button>Login</Button>
               </div>
             </div>
           </div>
