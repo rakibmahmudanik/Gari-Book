@@ -101,7 +101,7 @@ export default function ServicesSection() {
                   >
                     {/* White shape coming from outside on active/hover */}
                     <div
-                      className={`absolute top-10 left-0 w-25 h-18 bg-background rounded-r-lg transition-transform duration-500 ease-out z-0 ${
+                      className={`absolute top-10 left-0 w-25 h-18 bg-background rounded-r-xl transition-transform duration-500 ease-out z-0 ${
                         isCardActive ? "translate-x-0" : "-translate-x-full"
                       }`}
                     ></div>
@@ -178,10 +178,11 @@ export default function ServicesSection() {
                 network of car enthusiasts, all fueled by the same passion: the
                 open road and the thrill of making money doing what they love.
               </p>
-              <button className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-primary text-primary-foreground font-bold shadow-lg shadow-primary/25 hover:opacity-90 active:scale-95 transition-all">
-                <span>Learn More</span>
-                <FaArrowRight className="text-sm" />
-              </button>
+              <Button>
+                <span className="flex items-center gap-2">
+                  <span>Learn More</span> <FaArrowRight className="text-sm" />
+                </span>
+              </Button>
             </div>
             <div className="rounded-3xl overflow-hidden shadow-2xl border border-border">
               <img
@@ -206,10 +207,11 @@ export default function ServicesSection() {
                 own cars. VMS is a great tool that works with Garibook Business
                 to make sure your vehicles are used the best way possible.
               </p>
-              <button className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-primary text-primary-foreground font-bold shadow-lg shadow-primary/25 hover:opacity-90 active:scale-95 transition-all">
-                <span>Learn More</span>
-                <FaArrowRight className="text-sm" />
-              </button>
+              <Button>
+                <span className="flex items-center gap-2">
+                  <span>Learn More</span> <FaArrowRight className="text-sm" />
+                </span>
+              </Button>
             </div>
             <div className="rounded-3xl overflow-hidden p-6">
               <img
