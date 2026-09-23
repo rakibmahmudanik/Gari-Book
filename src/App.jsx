@@ -4,6 +4,8 @@ import FreedomJourneySection from "./components/FreedomJourneySection";
 import HeroSection from "./components/HeroSection";
 import MoreThanMilesSection from "./components/MoreThanMilesSection";
 import Navbar from "./components/Navbar";
+import NewsCard from "./components/NewsCard";
+import Reviews from "./components/Reviews";
 import ServicesSection from "./components/ServicesSection";
 import SmartDriverSection from "./components/SmartDriverSection";
 import States from "./components/States";
@@ -22,6 +24,8 @@ function App() {
         <MoreThanMilesSection />
         <BookingToArrivalSection />
         <SmartDriverSection />
+        <NewsCard />
+        <Reviews />
       </main>
     </>
   );
