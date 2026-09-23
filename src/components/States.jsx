@@ -1,8 +1,8 @@
 import gsap from "gsap";
 import { useRef } from "react";
-import { useScrollReveal } from "../../hooks/useScrollReveal";
 import carImage from "../assets/caranimation.gif";
 import cityImage from "../assets/cityframe.png";
+import { useScrollReveal } from "../hooks/useScrollReveal";
 
 export default function States() {
   const tripRef = useRef(null);

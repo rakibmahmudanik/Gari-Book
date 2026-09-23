@@ -1,5 +1,5 @@
 import { Typewriter } from "react-simple-typewriter";
-import { useScrollReveal } from "../../hooks/useScrollReveal";
+import { useScrollReveal } from "../hooks/useScrollReveal";
 import Button from "./ui/Button";
 
 export default function HeroSection() {

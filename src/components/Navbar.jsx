@@ -1,8 +1,8 @@
 import gsap from "gsap";
 import { useEffect, useRef, useState } from "react";
 import { MdTranslate } from "react-icons/md";
-import { useScrollReveal } from "../../hooks/useScrollReveal";
 import logoImage from "../assets/gaibook-logo-icon.svg";
+import { useScrollReveal } from "../hooks/useScrollReveal";
 import "../index.css";
 
 export default function Navbar() {
