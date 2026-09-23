@@ -14,7 +14,7 @@ export default function HeroSection() {
       <div className="max-w-full mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-8">
         {/* Left Side: Large Heading */}
         <div className="w-full lg:h-50 lg:w-3/6">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.15]">
+          <h1 className="text-4xl h-20 sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.15]">
             <Typewriter
               words={[
                 "Your Journey Starts Here ...",
