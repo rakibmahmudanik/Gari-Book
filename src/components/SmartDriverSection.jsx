@@ -6,12 +6,20 @@ export default function SmartDriverSection() {
     <section className="w-full bg-background text-foreground py-20 px-4 sm:px-6 lg:px-8 transition-colors duration-200">
       <div className="max-w-full mx-auto">
         {/* Section Title */}
-        <h2 className="text-4xl sm:text-4xl font-bold tracking-tight mb-8">
+        <h2
+          data-aos="fade-up"
+          data-aos-delay="100"
+          className="text-4xl sm:text-4xl font-bold tracking-tight mb-8"
+        >
           Be a Smart Driver
         </h2>
 
         {/* Main Banner Card (Yellow background, no shadow, simple & clean) */}
-        <div className="w-full bg-accent rounded-2xl overflow-hidden pt-10 px-10 lg:px-20 flex flex-col lg:flex-row items-center lg:items-center justify-between">
+        <div
+          data-aos="fade-up"
+          data-aos-delay="200"
+          className="w-full bg-accent rounded-2xl overflow-hidden pt-10 px-10 lg:px-20 flex flex-col lg:flex-row items-center lg:items-center justify-between"
+        >
           {/* Left Content (Text & Button) */}
           <div className="flex items-center">
             <div className="flex flex-col items-start space-y-6 max-w-xl mb-8 lg:mb-16">
@@ -27,7 +35,11 @@ export default function SmartDriverSection() {
           </div>
 
           {/* Right Image (Bigger size and aligned to bottom) */}
-          <div className="w-full lg:w-auto flex justify-end">
+          <div
+            data-aos="zoom-in"
+            data-aos-delay="100"
+            className="w-full lg:w-auto flex justify-end"
+          >
             <img
               src={driverImg}
               alt="Smart Driver"

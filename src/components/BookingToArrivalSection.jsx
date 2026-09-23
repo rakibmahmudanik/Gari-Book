@@ -40,22 +40,30 @@ export default function BookingToArrivalSection() {
       <div className="max-w-full mx-auto">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-12 gap-6">
-          <h2 className="text-3xl sm:text-5xl font-bold tracking-tight leading-tight">
+          <h2
+            data-aos="fade-up"
+            data-aos-delay="100"
+            className="text-3xl sm:text-5xl font-bold tracking-tight leading-tight"
+          >
             From Booking to Arrival It’s <br />
             All in Your Hands
           </h2>
-          <Button className="bg-primary text-background">Download</Button>
+          <div data-aos="fade-right" data-aos-delay="200">
+            <Button className="bg-primary text-background">Download</Button>
+          </div>
         </div>
 
         {/* Bento Grid Mapped Container */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {bentoData.map((item) => {
+          {bentoData.map((item, index) => {
             // Dynamically assign colSpan based on layout
             const spanClass =
               item.layout === "horizontal" ? "lg:col-span-2" : "lg:col-span-1";
 
             return (
               <div
+                data-aos="fade-up"
+                data-aos-delay={`${300 * index + 300}`}
                 key={item.id}
                 className={`${spanClass} rounded-2xl overflow-hidden shadow-lg transition-transform duration-300 bg-[#0b132b]/50 border border-slate-800`}
               >

@@ -15,9 +15,9 @@ export default function BookingForm() {
   const [airportTripType, setAirportTripType] = useState("airport"); // 'airport', 'home'
   const [hours, setHours] = useState(2);
 
-  const zooIn = useScrollReveal({
+  const zoomIn = useScrollReveal({
     type: "zoom",
-    scale: 0.6,
+    scale: 0.8,
     start: "top bottom",
     duration: 1.2,
     delay: 0.2,
@@ -27,7 +27,7 @@ export default function BookingForm() {
 
   return (
     <div
-      ref={zooIn}
+      ref={zoomIn}
       className="relative w-full -mb-70  max-w-full mx-auto px-4 sm:px-6 lg:px-8 z-30"
     >
       {/* Top Tabs Container inside a white wrapper look */}

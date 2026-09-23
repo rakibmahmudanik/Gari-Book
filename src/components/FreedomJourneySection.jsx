@@ -30,12 +30,20 @@ export default function FreedomJourneySection() {
     <section className="w-full bg-[#010816] text-[#f7f9fb] py-24 px-4 sm:px-6 lg:px-8 transition-colors duration-200">
       <div className="max-w-full">
         {/* Section Title */}
-        <h2 className="text-3xl sm:text-5xl font-bold tracking-tight mb-15">
+        <h2
+          data-aos="fade-up"
+          data-aos-delay="100"
+          className="text-3xl sm:text-5xl font-bold tracking-tight mb-15"
+        >
           Freedom in Every Journey
         </h2>
 
         {/* Full Image Container */}
-        <div className="w-full rounded-3xl overflow-hidden shadow-2xl mb-16 border border-slate-800">
+        <div
+          data-aos="zoom-in"
+          data-aos-delay="200"
+          className="w-full rounded-3xl overflow-hidden shadow-2xl mb-16 border border-slate-800"
+        >
           <img
             src={journeyImage}
             alt="Freedom in Every Journey"
@@ -46,7 +54,11 @@ export default function FreedomJourneySection() {
         {/* Info Grid (Card type without background, font increased and right aligned on desktop) */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-0 items-end">
           {infoData.map((item, index) => (
-            <div className="flex  lg:justify-end">
+            <div
+              data-aos="fade-up"
+              data-aos-delay={`${200 * index + 200}`}
+              className="flex  lg:justify-end"
+            >
               <div
                 key={index}
                 className="flex flex-col md:items-start space-y-4 px-4"

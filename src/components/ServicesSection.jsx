@@ -1,7 +1,6 @@
 import { useState } from "react";
 
 // Import images placeholder
-import { useScrollReveal } from "../../hooks/useScrollReveal";
 import carImg3 from "../assets/airport_rental.svg";
 import businessImg from "../assets/busines.jpeg";
 import vmsImg from "../assets/Frame_1000001473.png";
@@ -46,22 +45,34 @@ export default function ServicesSection() {
       image: carImg4,
     },
   ];
-  const fadeUp = useScrollReveal({
-    type: "fade",
-    direction: "up",
-    // stagger: 0.4,
-    duration: 1,
-  });
+
+  // const CardFadeUP = useScrollReveal({
+  //   type: "fade",
+  //   direction: "up",
+  //   distance: 80,
+  //   duration: 1,
+  //   stagger: 0.4,
+  //   ease: "back.out(1.7)",
+  // });
+
   return (
     <section className="w-full bg-background text-foreground py-20 px-4 sm:px-6 lg:px-8 transition-colors duration-200">
-      <div ref={fadeUp} className="max-w-full mx-auto">
+      <div className="max-w-full mx-auto">
         {/* Section Title */}
-        <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight mb-8">
+        <h2
+          data-aos="fade-up"
+          data-aos-delay="100"
+          className="text-3xl sm:text-5xl font-extrabold tracking-tight mb-8"
+        >
           Our Services
         </h2>
 
         {/* Top 4 Tabs */}
-        <div className="flex items-center gap-3 overflow-x-auto pb-4 mb-12 scrollbar-none">
+        <div
+          data-aos="fade-up"
+          data-aos-delay="200"
+          className="flex items-center gap-3 overflow-x-auto pb-4 mb-12 scrollbar-none"
+        >
           {tabs.map((tab) => {
             const isActive = activeTab === tab.id;
             return (
@@ -83,7 +94,11 @@ export default function ServicesSection() {
         {/* TAB 1: RIDES (Mapped Cards with Hover Effect) */}
         {activeTab === "rides" && (
           <div>
-            <h3 className="text-4xl sm:text-5xl font-bold tracking-tight mb-10 leading-tight">
+            <h3
+              data-aos="fade-up"
+              data-aos-delay="300"
+              className="text-4xl sm:text-5xl font-bold tracking-tight mb-10 leading-tight"
+            >
               Every Ride <br /> One Platform
             </h3>
 
@@ -95,47 +110,54 @@ export default function ServicesSection() {
 
                 return (
                   <div
-                    key={index}
-                    onMouseEnter={() => setHoveredIndex(index)}
-                    onMouseLeave={() => setHoveredIndex(null)}
-                    className={`relative rounded-xl p-10 flex flex-col justify-center overflow-hidden shadow-sm transition-all duration-300 min-h-75 ${
-                      isCardActive
-                        ? "bg-primary text-primary-foreground shadow-xl"
-                        : "bg-muted/50 text-foreground hover:shadow-xl"
-                    }`}
+                    data-aos="fade-up"
+                    data-aos-delay={`${300 * index + 300}`}
                   >
-                    {/* White shape coming from outside on active/hover */}
                     <div
-                      className={`absolute top-10 left-0 w-25 h-18 bg-background rounded-r-xl transition-transform duration-500 ease-out z-0 ${
-                        isCardActive ? "translate-x-0" : "-translate-x-full"
-                      }`}
-                    ></div>
-
-                    {/* Top Image with translate effect */}
-                    <div
-                      className={`relative z-10 transition-transform duration-400 ${
-                        isCardActive ? "translate-x-3" : ""
+                      key={index}
+                      onMouseEnter={() => setHoveredIndex(index)}
+                      onMouseLeave={() => setHoveredIndex(null)}
+                      className={`relative rounded-xl p-10 flex flex-col justify-center overflow-hidden shadow-sm transition-all duration-300 min-h-75 ${
+                        isCardActive
+                          ? "bg-primary text-primary-foreground shadow-xl"
+                          : "bg-muted/50 text-foreground hover:shadow-xl"
                       }`}
                     >
-                      <img
-                        src={item.image}
-                        alt={item.title}
-                        className="h-15 w-auto object-contain"
-                      />
-                    </div>
+                      {/* White shape coming from outside on active/hover */}
+                      <div
+                        className={`absolute top-10 left-0 w-25 h-18 bg-background rounded-r-xl transition-transform duration-500 ease-out z-0 ${
+                          isCardActive ? "translate-x-0" : "-translate-x-full"
+                        }`}
+                      ></div>
 
-                    {/* Content */}
-                    <div className="relative z-10 mt-auto">
-                      <h4 className="text-2xl font-bold mb-2">{item.title}</h4>
-                      <p
-                        className={`text-sm leading-relaxed transition-colors ${
-                          isCardActive
-                            ? "text-primary-foreground/90"
-                            : "text-muted-foreground"
+                      {/* Top Image with translate effect */}
+                      <div
+                        className={`relative z-10 transition-transform duration-400 ${
+                          isCardActive ? "translate-x-3" : ""
                         }`}
                       >
-                        {item.description}
-                      </p>
+                        <img
+                          src={item.image}
+                          alt={item.title}
+                          className="h-15 w-auto object-contain"
+                        />
+                      </div>
+
+                      {/* Content */}
+                      <div className="relative z-10 mt-auto">
+                        <h4 className="text-2xl font-bold mb-2">
+                          {item.title}
+                        </h4>
+                        <p
+                          className={`text-sm leading-relaxed transition-colors ${
+                            isCardActive
+                              ? "text-primary-foreground/90"
+                              : "text-muted-foreground"
+                          }`}
+                        >
+                          {item.description}
+                        </p>
+                      </div>
                     </div>
                   </div>
                 );

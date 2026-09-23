@@ -1,3 +1,6 @@
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 import BeyondDestinations from "./components/BeyondDestinations";
 import BookingToArrivalSection from "./components/BookingToArrivalSection";
 import DownloadAppSection from "./components/DownloadAppSection";
@@ -13,6 +16,12 @@ import SmartDriverSection from "./components/SmartDriverSection";
 // import "./index.css";
 
 function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: 700,
+      offset: 300,
+    });
+  }, []);
   return (
     <>
       <Navbar />

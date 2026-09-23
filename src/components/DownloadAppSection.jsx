@@ -6,9 +6,17 @@ export default function DownloadAppSection() {
     <section className="w-full bg-background text-foreground pt-32 pb-20 px-4 sm:px-6 lg:px-8 transition-colors duration-200">
       <div className="max-w-full mx-auto">
         {/* Main Banner Card with relative positioning and top overflow allowance */}
-        <div className="relative w-full bg-primary rounded-2xl overflow-visible py-15 md:py-17 lg:py-20 px-8 md:px-15 lg:px-20 flex flex-col lg:flex-row items-center justify-between text-white mt-12 lg:mt-0">
+        <div
+          data-aos="fade-up"
+          data-aos-delay="100"
+          className="relative w-full bg-primary rounded-2xl overflow-visible py-15 md:py-17 lg:py-20 px-8 md:px-15 lg:px-20 flex flex-col lg:flex-row items-center justify-between text-white mt-12 lg:mt-0"
+        >
           {/* Left Content (Title, Subtitle & Button) */}
-          <div className="flex flex-col items-start space-y-4 max-w-xl z-10 ml-15">
+          <div
+            data-aos="fade-up"
+            data-aos-delay="200"
+            className="flex flex-col items-start space-y-4 max-w-xl z-10 ml-15"
+          >
             <h2 className="text-3xl sm:text-5xl font-bold tracking-tight leading-tight">
               Download <br />
               Garibook Mobile App
@@ -25,7 +33,11 @@ export default function DownloadAppSection() {
           </div>
 
           {/* Right Image Container - Bottom aligned, top overflowing outside the card */}
-          <div className="lg:absolute lg:right-30 lg:bottom-0 mt-8 lg:mt-0 flex justify-center z-20 pointer-events-none">
+          <div
+            data-aos="fade-down-right"
+            data-aos-delay="300"
+            className="lg:absolute lg:right-30 lg:bottom-0 mt-8 lg:mt-0 flex justify-center z-20 pointer-events-none"
+          >
             <img
               src={mobileAppImg}
               alt="Garibook Mobile App"

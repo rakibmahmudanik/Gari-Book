@@ -33,7 +33,11 @@ export default function NewsCard() {
   };
 
   return (
-    <section className="w-full bg-background text-foreground py-20 px-4 sm:px-6 lg:px-8 transition-colors duration-200 overflow-hidden">
+    <section
+      data-aos="fade-up"
+      data-aos-delay="100"
+      className="w-full bg-background text-foreground py-20 px-4 sm:px-6 lg:px-8 transition-colors duration-200 overflow-hidden"
+    >
       <div className="max-w-full mx-auto">
         {/* Section Header with Navigation Arrows */}
         <div className="flex items-center justify-between mb-12">
