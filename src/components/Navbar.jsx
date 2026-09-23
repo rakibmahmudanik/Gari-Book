@@ -1,6 +1,7 @@
 import gsap from "gsap";
 import { useEffect, useRef, useState } from "react";
 import { MdTranslate } from "react-icons/md";
+import { useScrollReveal } from "../../hooks/useScrollReveal";
 import logoImage from "../assets/gaibook-logo-icon.svg";
 import "../index.css";
 
@@ -91,6 +92,13 @@ export default function Navbar() {
     });
   };
 
+  const navref = useScrollReveal({
+    type: "fade",
+    direction: "down",
+    distance: 80,
+    duration: 1,
+  });
+
   const navLinks = [
     { name: "About Us", href: "#about" },
     { name: "Earn With Garibook", href: "#earn" },
@@ -103,7 +111,10 @@ export default function Navbar() {
   return (
     <>
       {/* Main normal navbar at the top of the page */}
-      <header className="w-full bg-background text-foreground border-b border-border shadow-sm transition-colors duration-200 relative z-40">
+      <header
+        ref={navref}
+        className="w-full bg-background text-foreground border-b border-border shadow-sm transition-colors duration-200 relative z-40"
+      >
         <div className="flex justify-end max-w-full mx-auto px-4 sm:px-6 lg:px-8">
           <button
             onClick={() => setIsActive(!isActive)}

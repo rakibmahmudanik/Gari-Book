@@ -6,6 +6,7 @@ import {
   FaMinus,
   FaPlus,
 } from "react-icons/fa";
+import { useScrollReveal } from "../../hooks/useScrollReveal";
 import Button from "./ui/Button";
 
 export default function BookingForm() {
@@ -14,10 +15,23 @@ export default function BookingForm() {
   const [airportTripType, setAirportTripType] = useState("airport"); // 'airport', 'home'
   const [hours, setHours] = useState(2);
 
+  const zooIn = useScrollReveal({
+    type: "zoom",
+    scale: 0.6,
+    start: "top bottom",
+    duration: 1.2,
+    delay: 0.2,
+    ease: "back.out(1.7)",
+    toggleActions: "play none none none",
+  });
+
   return (
-    <div className="relative w-full max-w-full mx-auto px-4 sm:px-6 lg:px-8 z-30 -mb-40">
+    <div
+      ref={zooIn}
+      className="relative w-full -mb-70  max-w-full mx-auto px-4 sm:px-6 lg:px-8 z-30"
+    >
       {/* Top Tabs Container inside a white wrapper look */}
-      <div className=" inline-flex  items-center gap-3 p-5 border border-border rounded-t-2xl">
+      <div className="inline-flex items-center gap-3 p-5 border border-border rounded-t-2xl bg-background">
         <button
           onClick={() => setActiveTab("car")}
           className={`px-8 py-4 rounded-lg font-bold text-base transition-all shadow-sm ${
@@ -42,14 +56,13 @@ export default function BookingForm() {
       </div>
 
       {/* Main White Card Body */}
-      <div className="bg-background text-foreground rounded-3xl rounded-tl-none shadow-2xl border border-border p-6 sm:p-10 ">
+      <div className="bg-background text-foreground rounded-3xl rounded-tl-none shadow-2xl border border-border p-6 sm:p-10">
         {/* CAR RENTAL TAB CONTENT */}
         {activeTab === "car" && (
           <div>
-            {/* Fields Grid */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6 items-center pb-8 border-b border-border">
               {/* Field 1: Choose a Car */}
-              <div className="flex flex-col space-y-2 p-3  border-r-2 border-border">
+              <div className="flex flex-col space-y-2 p-3 border-r-2 border-border">
                 <label className="text-sm font-bold text-muted-foreground flex items-center gap-2">
                   <FaCar className="text-base" />
                   <span>
@@ -85,7 +98,7 @@ export default function BookingForm() {
                 />
               </div>
 
-              {/* Field 3: Drop-off Location (Shown for One Way & Round Way) */}
+              {/* Field 3: Drop-off Location */}
               {carTripType !== "hourly" && (
                 <div className="flex flex-col space-y-2 p-3 border-r-2 border-border">
                   <label className="text-sm font-bold text-muted-foreground flex items-center gap-2">
@@ -116,7 +129,7 @@ export default function BookingForm() {
                 />
               </div>
 
-              {/* Extra Field for Round Way: Return Date */}
+              {/* Extra Field for Round Way */}
               {carTripType === "round" && (
                 <div className="flex flex-col space-y-2 p-3 border-r-2 border-border md:col-span-4 lg:col-span-1">
                   <label className="text-sm font-bold text-muted-foreground flex items-center gap-2">
@@ -132,7 +145,7 @@ export default function BookingForm() {
                 </div>
               )}
 
-              {/* Extra Field for Hourly: Select Hours */}
+              {/* Extra Field for Hourly */}
               {carTripType === "hourly" && (
                 <div className="flex flex-col space-y-2 p-3 border-r-2 border-border">
                   <label className="text-sm font-bold text-muted-foreground flex items-center gap-2">
@@ -165,7 +178,7 @@ export default function BookingForm() {
               )}
             </div>
 
-            {/* Bottom Radio Buttons & Continue Button */}
+            {/* Bottom Radio & Continue Button */}
             <div className="flex flex-col sm:flex-row items-center justify-between pt-8 gap-6">
               <div className="flex items-center gap-4 flex-wrap">
                 <label
@@ -237,9 +250,7 @@ export default function BookingForm() {
         {/* AIRPORT RENTAL TAB CONTENT */}
         {activeTab === "airport" && (
           <div>
-            {/* Fields Grid */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6 items-center pb-8 border-b border-border">
-              {/* Field 1: Choose a Car */}
               <div className="flex flex-col space-y-2 p-3 border-r-2 border-border">
                 <label className="text-sm font-bold text-muted-foreground flex items-center gap-2">
                   <FaCar className="text-base" />
@@ -261,7 +272,6 @@ export default function BookingForm() {
                 </select>
               </div>
 
-              {/* Field 2: Pickup Location */}
               <div className="flex flex-col space-y-2 p-3 border-r-2 border-border">
                 <label className="text-sm font-bold text-muted-foreground flex items-center gap-2">
                   <FaMapMarkerAlt className="text-amber-500 text-base" />
@@ -276,7 +286,6 @@ export default function BookingForm() {
                 />
               </div>
 
-              {/* Field 3: Drop-off Airport */}
               <div className="flex flex-col space-y-2 p-3 border-r-2 border-border">
                 <label className="text-sm font-bold text-muted-foreground flex items-center gap-2">
                   <FaMapMarkerAlt className="text-blue-600 text-base" />
@@ -300,7 +309,6 @@ export default function BookingForm() {
                 </select>
               </div>
 
-              {/* Field 4: Pickup Date & Time */}
               <div className="flex flex-col space-y-2 p-3 border-r-2 border-border">
                 <label className="text-sm font-bold text-muted-foreground flex items-center gap-2">
                   <FaCalendarAlt className="text-base" />
@@ -315,7 +323,6 @@ export default function BookingForm() {
               </div>
             </div>
 
-            {/* Bottom Radio Buttons & Continue Button */}
             <div className="flex flex-col sm:flex-row items-center justify-between pt-8 gap-6">
               <div className="flex items-center gap-4 flex-wrap">
                 <label

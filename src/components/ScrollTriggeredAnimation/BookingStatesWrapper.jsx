@@ -3,7 +3,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
 import BookingForm from "../BookingForm";
 import HeroSection from "../HeroSection";
-import States from "./States";
+import States from "../States";
 
 // Register ScrollTrigger plugin with GSAP
 gsap.registerPlugin(ScrollTrigger);
@@ -14,14 +14,18 @@ export default function BookingStatesWrapper() {
 
   useEffect(() => {
     let ctx = gsap.context(() => {
-      // Pin the booking section and scrub it over the states section
-      ScrollTrigger.create({
-        trigger: containerRef.current,
-        start: "top top", // When top of the wrapper hits top of viewport
-        end: "bottom bottom", // When bottom of the wrapper hits bottom of viewport
-        pin: bookingRef.current, // Pin the booking form box
-        pinSpacing: false, // Prevents excessive blank space, letting states slide underneath smoothly
-        scrub: true, // Smooth scrubbing tied to scroll position
+      // 1. Page load entrance animation (Slides up from bottom when visiting the site)
+
+      // 2. Controlled scroll parallax animation (Balanced movement so it doesn't vanish)
+      gsap.to(bookingRef.current, {
+        y: -180, // Balanced value to keep it inside the screen view while moving fast
+        ease: "none",
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: true, // Instant response without lag
+        },
       });
     }, containerRef);
 
@@ -29,16 +33,16 @@ export default function BookingStatesWrapper() {
   }, []);
 
   return (
-    <div ref={containerRef} className="relative w-full">
-      {/* Hero background section or container */}
+    <div ref={containerRef} className="relative w-full overflow-hidden">
+      {/* Hero background section */}
       <HeroSection />
 
-      {/* Booking Section that will be pinned temporarily */}
+      {/* Booking Section */}
       <div ref={bookingRef} className="relative z-40">
         <BookingForm />
       </div>
 
-      {/* States Section that scrolls up and goes under the pinned booking section */}
+      {/* States Section */}
       <States />
     </div>
   );

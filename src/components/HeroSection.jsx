@@ -1,7 +1,14 @@
 import { Typewriter } from "react-simple-typewriter";
+import { useScrollReveal } from "../../hooks/useScrollReveal";
 import Button from "./ui/Button";
 
 export default function HeroSection() {
+  const fadeRef = useScrollReveal({
+    type: "fade",
+    direction: "up",
+    distance: 80,
+    duration: 1,
+  });
   return (
     <section className="relative w-full bg-background text-foreground py-16 md:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden transition-colors duration-200">
       <div className="max-w-full mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-8">
@@ -26,7 +33,10 @@ export default function HeroSection() {
         </div>
 
         {/* Right Side: Description and CTA Button */}
-        <div className="w-full lg:w-2/5 flex flex-col items-start space-y-6">
+        <div
+          ref={fadeRef}
+          className="w-full lg:w-2/5 flex flex-col items-start space-y-6"
+        >
           <p className="text-xl text-muted-foreground font-semibold leading-relaxed">
             Choose your city, pick your car and enjoy the journey with
             Garibook’s best drivers.

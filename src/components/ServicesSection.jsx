@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 // Import images placeholder
+import { useScrollReveal } from "../../hooks/useScrollReveal";
 import carImg3 from "../assets/airport_rental.svg";
 import businessImg from "../assets/busines.jpeg";
 import vmsImg from "../assets/Frame_1000001473.png";
@@ -45,10 +46,15 @@ export default function ServicesSection() {
       image: carImg4,
     },
   ];
-
+  const fadeUp = useScrollReveal({
+    type: "fade",
+    direction: "up",
+    // stagger: 0.4,
+    duration: 1,
+  });
   return (
     <section className="w-full bg-background text-foreground py-20 px-4 sm:px-6 lg:px-8 transition-colors duration-200">
-      <div className="max-w-full mx-auto">
+      <div ref={fadeUp} className="max-w-full mx-auto">
         {/* Section Title */}
         <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight mb-8">
           Our Services
