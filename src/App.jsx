@@ -1,5 +1,7 @@
+import BeyondDestinations from "./components/BeyondDestinations";
 import BookingForm from "./components/BookingForm";
 import BookingToArrivalSection from "./components/BookingToArrivalSection";
+import DownloadAppSection from "./components/DownloadAppSection";
 import FreedomJourneySection from "./components/FreedomJourneySection";
 import HeroSection from "./components/HeroSection";
 import MoreThanMilesSection from "./components/MoreThanMilesSection";
@@ -26,7 +28,11 @@ function App() {
         <SmartDriverSection />
         <NewsCard />
         <Reviews />
+        <BeyondDestinations />
       </main>
+      <footer>
+        <DownloadAppSection />
+      </footer>
     </>
   );
 }

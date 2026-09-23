@@ -1,4 +1,3 @@
-import { FaArrowRight } from "react-icons/fa";
 import exploreRideImg from "../assets/BookingToArrival/explore.jpeg";
 import freedom from "../assets/BookingToArrival/freedom.jpg";
 import chooseCarImg from "../assets/BookingToArrival/prefarred_car.jpg";
@@ -45,11 +44,7 @@ export default function BookingToArrivalSection() {
             From Booking to Arrival It’s <br />
             All in Your Hands
           </h2>
-          <Button>
-            <span className="flex items-center gap-2 text-2xl">
-              <span>Download</span> <FaArrowRight className=" text-2xl" />
-            </span>
-          </Button>
+          <Button className="bg-primary text-background">Download</Button>
         </div>
 
         {/* Bento Grid Mapped Container */}

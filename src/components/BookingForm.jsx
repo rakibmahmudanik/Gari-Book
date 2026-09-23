@@ -1,6 +1,5 @@
 import { useState } from "react";
 import {
-  FaArrowRight,
   FaCalendarAlt,
   FaCar,
   FaMapMarkerAlt,
@@ -231,10 +230,7 @@ export default function BookingSection() {
                 </label>
               </div>
 
-              <button className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-10 py-4 rounded-2xl bg-primary text-primary-foreground font-bold text-base shadow-lg shadow-primary/30 transition-all active:scale-95">
-                <span>Continue</span>
-                <FaArrowRight className="text-sm" />
-              </button>
+              <Button className="bg-primary text-background">Continue</Button>
             </div>
           </div>
         )}
@@ -365,7 +361,7 @@ export default function BookingSection() {
                 </label>
               </div>
 
-              <Button>Continue</Button>
+              <Button className="bg-primary text-background">Continue</Button>
             </div>
           </div>
         )}

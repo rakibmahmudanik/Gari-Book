@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { MdTranslate } from "react-icons/md";
 import logoImage from "../assets/gaibook-logo-icon.svg";
 import "../index.css";
-import Button from "./ui/Button";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -131,7 +130,12 @@ export default function Navbar() {
                 )}
               </button>
 
-              <Button>Login</Button>
+              <button
+                onClick={() => console.log("Login clicked")}
+                className="px-6 py-2.5 rounded-lg bg-primary text-primary-foreground font-semibold shadow-lg shadow-primary/25 hover:bg-primary/90 active:scale-95 transition-all duration-200 cursor-pointer"
+              >
+                Login
+              </button>
             </div>
 
             {/* Mobile Menu & Theme Toggle */}
@@ -270,7 +274,12 @@ export default function Navbar() {
               </div>
 
               <div className="pt-6 border-t border-border">
-                <Button>Login</Button>
+                <button
+                  onClick={() => console.log("Login clicked")}
+                  className="px-6 py-2.5 rounded-lg bg-primary text-primary-foreground font-semibold shadow-lg shadow-primary/25 hover:bg-primary/90 active:scale-95 transition-all duration-200 cursor-pointer"
+                >
+                  Login
+                </button>
               </div>
             </div>
           </div>

@@ -67,7 +67,7 @@ export default function Reviews() {
   };
 
   return (
-    <section className="w-full bg-background text-foreground py-20 px-4 sm:px-6 lg:px-8 transition-colors duration-200 overflow-hidden">
+    <section className="w-full bg-muted text-foreground py-20 px-4 sm:px-6 lg:px-8 transition-colors duration-200 overflow-hidden">
       <div className="max-w-full mx-auto">
         {/* Section Header with Title, Subtitle and Navigation Arrows */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-12 gap-6">
@@ -85,14 +85,14 @@ export default function Reviews() {
           <div className="flex items-center gap-4">
             <button
               onClick={() => handleScroll("left")}
-              className="w-16 h-16 rounded-full bg-muted border border-border flex items-center justify-center hover:bg-foreground hover:text-primary-foreground hover:border-primary transition-all active:scale-95 cursor-pointer"
+              className="w-16 h-16 rounded-full bg-background border border-border flex items-center justify-center hover:bg-foreground hover:text-primary-foreground hover:border-primary transition-all active:scale-95 cursor-pointer"
               aria-label="Scroll Left"
             >
               <FaArrowLeft className="text-base" />
             </button>
             <button
               onClick={() => handleScroll("right")}
-              className="w-16 h-16 rounded-full bg-muted border border-border flex items-center justify-center hover:bg-foreground hover:text-primary-foreground hover:border-primary transition-all active:scale-95 cursor-pointer"
+              className="w-16 h-16 rounded-full bg-background border border-border flex items-center justify-center hover:bg-foreground hover:text-primary-foreground hover:border-primary transition-all active:scale-95 cursor-pointer"
               aria-label="Scroll Right"
             >
               <FaArrowRight className="text-base" />
@@ -103,17 +103,17 @@ export default function Reviews() {
         {/* Scrollable Cards Container */}
         <div
           ref={scrollRef}
-          className="flex items-stretch gap-6 overflow-x-auto pb-6 scrollbar-none scroll-smooth snap-x snap-mandatory"
+          className="flex items-stretch gap-5 overflow-x-auto pb-6 scrollbar-none scroll-smooth snap-x snap-mandatory"
         >
           {passengersData.map((passenger) => (
             <div
               key={passenger.id}
-              className="flex flex-col min-w-[320px] sm:min-w-[420px] max-w-[450px] flex-shrink-0 snap-start"
+              className="flex flex-col min-w-[320px] sm:min-w-105 max-w-112.5 shrink-0 snap-start"
             >
               {/* Video Thumbnail Card with Play Button */}
               <div
                 onClick={() => setActiveVideoUrl(passenger.videoUrl)}
-                className="relative w-full h-64 sm:h-72 rounded-3xl overflow-hidden shadow-md cursor-pointer border border-border mb-4 bg-muted group"
+                className="relative w-full h-64 sm:h-72 rounded-2xl overflow-hidden shadow-md cursor-pointer border border-border mb-4 bg-muted group"
               >
                 <img
                   src={passenger.thumbnail}

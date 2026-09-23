@@ -62,7 +62,7 @@ export default function NewsCard() {
         {/* Scrollable Cards Container */}
         <div
           ref={scrollRef}
-          className=" w-full flex items-stretch justify-between gap-6 overflow-x-auto pb-6 scrollbar-none scroll-smooth snap-x snap-mandatory"
+          className=" w-full flex items-stretch justify-between gap-5 overflow-x-auto pb-6 scrollbar-none scroll-smooth snap-x snap-mandatory"
         >
           {newsData.map((news) => (
             <div key={news.id} className="snap-start">

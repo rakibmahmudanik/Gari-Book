@@ -1,5 +1,3 @@
-import { FaArrowRight } from "react-icons/fa";
-
 import driverImg from "../assets/no_commission_app_screen.png";
 import Button from "./ui/Button";
 
@@ -22,11 +20,8 @@ export default function SmartDriverSection() {
                 100% Freedom
               </h3>
 
-              <Button>
-                <span className="flex items-center gap-2 w-60 text-left text-xl p-2">
-                  <span>Download Smart Driver App</span>{" "}
-                  <FaArrowRight className="text-xl" />
-                </span>
+              <Button className="bg-primary text-background text-left">
+                Download Smart <br /> Driver App
               </Button>
             </div>
           </div>

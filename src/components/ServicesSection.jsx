@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { FaArrowRight } from "react-icons/fa";
 
 // Import images placeholder
 import carImg3 from "../assets/airport_rental.svg";
@@ -51,7 +50,7 @@ export default function ServicesSection() {
     <section className="w-full bg-background text-foreground py-20 px-4 sm:px-6 lg:px-8 transition-colors duration-200">
       <div className="max-w-full mx-auto">
         {/* Section Title */}
-        <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-8">
+        <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight mb-8">
           Our Services
         </h2>
 
@@ -78,7 +77,7 @@ export default function ServicesSection() {
         {/* TAB 1: RIDES (Mapped Cards with Hover Effect) */}
         {activeTab === "rides" && (
           <div>
-            <h3 className="text-4xl sm:text-4xl font-bold tracking-tight mb-10 leading-tight">
+            <h3 className="text-4xl sm:text-5xl font-bold tracking-tight mb-10 leading-tight">
               Every Ride <br /> One Platform
             </h3>
 
@@ -143,18 +142,14 @@ export default function ServicesSection() {
         {activeTab === "business" && (
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <h3 className="text-4xl sm:text-4xl font-bold tracking-tight leading-tight">
+              <h3 className="text-4xl sm:text-5xl font-bold tracking-tight leading-tight">
                 Modern Car Rentals for Business
               </h3>
               <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
                 Simplify your corporate transportation, ensure on-time team
                 mobility, and gain control with our VMS.
               </p>
-              <Button>
-                <span className="flex items-center gap-2">
-                  <span>Learn More</span> <FaArrowRight className="text-sm" />
-                </span>
-              </Button>
+              <Button className="bg-primary text-background">Learn More</Button>
             </div>
             <div className="rounded-3xl overflow-hidden shadow-2xl border border-border">
               <img
@@ -170,7 +165,7 @@ export default function ServicesSection() {
         {activeTab === "club" && (
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <h3 className="text-4xl sm:text-4xl font-bold tracking-tight leading-tight">
+              <h3 className="text-4xl sm:text-5xl font-bold tracking-tight leading-tight">
                 Turn Your Car into Earnings with Garibook Club
               </h3>
               <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
@@ -178,11 +173,7 @@ export default function ServicesSection() {
                 network of car enthusiasts, all fueled by the same passion: the
                 open road and the thrill of making money doing what they love.
               </p>
-              <Button>
-                <span className="flex items-center gap-2">
-                  <span>Learn More</span> <FaArrowRight className="text-sm" />
-                </span>
-              </Button>
+              <Button className="bg-primary text-background">Learn More</Button>
             </div>
             <div className="rounded-3xl overflow-hidden shadow-2xl border border-border">
               <img
@@ -198,7 +189,7 @@ export default function ServicesSection() {
         {activeTab === "vms" && (
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <h3 className="text-4xl sm:text-4xl font-bold tracking-tight leading-tight">
+              <h3 className="text-4xl sm:text-5xl font-bold tracking-tight leading-tight">
                 Vehicle Management System - VMS
               </h3>
               <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
@@ -207,11 +198,7 @@ export default function ServicesSection() {
                 own cars. VMS is a great tool that works with Garibook Business
                 to make sure your vehicles are used the best way possible.
               </p>
-              <Button>
-                <span className="flex items-center gap-2">
-                  <span>Learn More</span> <FaArrowRight className="text-sm" />
-                </span>
-              </Button>
+              <Button className="bg-primary text-background">Learn More</Button>
             </div>
             <div className="rounded-3xl overflow-hidden p-6">
               <img

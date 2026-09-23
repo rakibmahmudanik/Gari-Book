@@ -12,7 +12,7 @@ export default function ReuseableCard({
   return (
     <div className="flex flex-col justify-between bg-transparent min-w-[320px] sm:min-w-95 max-w-120 shrink-0 cursor-pointer group">
       {/* Top Image */}
-      <div className="w-full h-56 sm:h-64 rounded-3xl overflow-hidden mb-6 border border-border shadow-sm">
+      <div className="w-full h-56 sm:h-64 rounded-2xl overflow-hidden mb-6 border border-border shadow-sm">
         <img
           src={image}
           alt={title}

@@ -1,5 +1,5 @@
-import { FaArrowRight } from "react-icons/fa";
 import { Typewriter } from "react-simple-typewriter";
+import Button from "./ui/Button";
 
 export default function HeroSection() {
   return (
@@ -32,13 +32,7 @@ export default function HeroSection() {
             Garibook’s best drivers.
           </p>
 
-          <a
-            href="#download"
-            className="inline-flex items-center justify-center gap-3 px-10 py-6 rounded-xl font-bold text-black bg-accent shadow-lg transition-all duration-400 hover:opacity-90 hover:scale-105 active:scale-95 group"
-          >
-            <span>Download App</span>
-            <FaArrowRight className="text-sm group-hover:translate-x-1.5 duration-300" />
-          </a>
+          <Button>Download</Button>
         </div>
       </div>
     </section>
