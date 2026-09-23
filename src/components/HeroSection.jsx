@@ -6,7 +6,7 @@ export default function HeroSection() {
     <section className="relative w-full bg-background text-foreground py-16 md:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden transition-colors duration-200">
       <div className="max-w-full mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-8">
         {/* Left Side: Large Heading */}
-        <div className="w-full h-50 lg:w-3/6">
+        <div className="w-full lg:h-50 lg:w-3/6">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.15]">
             <Typewriter
               words={[

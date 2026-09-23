@@ -8,7 +8,7 @@ import {
 } from "react-icons/fa";
 import Button from "./ui/Button";
 
-export default function BookingSection() {
+export default function BookingForm() {
   const [activeTab, setActiveTab] = useState("car"); // 'car' or 'airport'
   const [carTripType, setCarTripType] = useState("oneway"); // 'oneway', 'round', 'hourly'
   const [airportTripType, setAirportTripType] = useState("airport"); // 'airport', 'home'
@@ -126,9 +126,8 @@ export default function BookingSection() {
                     </span>
                   </label>
                   <input
-                    type="date"
-                    placeholder="MM/DD/YYYY 00:00 PM"
-                    className="w-full bg-transparent text-base font-semibold text-foreground placeholder:text-muted-foreground focus:outline-none"
+                    type="datetime-local"
+                    className="w-full bg-transparent text-base font-semibold text-foreground focus:outline-none cursor-pointer"
                   />
                 </div>
               )}
@@ -310,9 +309,8 @@ export default function BookingSection() {
                   </span>
                 </label>
                 <input
-                  type="text"
-                  placeholder="MM/DD/YYYY 00:00 PM"
-                  className="w-full bg-transparent text-base font-semibold text-foreground placeholder:text-muted-foreground focus:outline-none"
+                  type="datetime-local"
+                  className="w-full bg-transparent text-base font-semibold text-foreground focus:outline-none cursor-pointer"
                 />
               </div>
             </div>

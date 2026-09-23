@@ -2,6 +2,7 @@ import BeyondDestinations from "./components/BeyondDestinations";
 import BookingForm from "./components/BookingForm";
 import BookingToArrivalSection from "./components/BookingToArrivalSection";
 import DownloadAppSection from "./components/DownloadAppSection";
+import Footer from "./components/Footer";
 import FreedomJourneySection from "./components/FreedomJourneySection";
 import HeroSection from "./components/HeroSection";
 import MoreThanMilesSection from "./components/MoreThanMilesSection";
@@ -32,6 +33,7 @@ function App() {
       </main>
       <footer>
         <DownloadAppSection />
+        <Footer />
       </footer>
     </>
   );
