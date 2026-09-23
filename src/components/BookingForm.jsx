@@ -6,7 +6,6 @@ import {
   FaMinus,
   FaPlus,
 } from "react-icons/fa";
-import { useScrollReveal } from "../../hooks/useScrollReveal";
 import Button from "./ui/Button";
 
 export default function BookingForm() {
@@ -15,19 +14,11 @@ export default function BookingForm() {
   const [airportTripType, setAirportTripType] = useState("airport"); // 'airport', 'home'
   const [hours, setHours] = useState(2);
 
-  const zoomIn = useScrollReveal({
-    type: "zoom",
-    scale: 0.8,
-    start: "top bottom",
-    duration: 1.2,
-    delay: 0.2,
-    ease: "back.out(1.7)",
-    toggleActions: "play none none none",
-  });
-
   return (
     <div
-      ref={zoomIn}
+      data-aos="zoom-in"
+      data-aos-delay="100"
+      data-aos-offset="100"
       className="relative w-full -mb-70  max-w-full mx-auto px-4 sm:px-6 lg:px-8 z-30"
     >
       {/* Top Tabs Container inside a white wrapper look */}

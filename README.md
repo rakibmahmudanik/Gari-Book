@@ -1,16 +1,35 @@
-# React + Vite
+# Gari Book
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, high-performance, and responsive frontend web application built for a premier ride-sharing and urban mobility service. The platform features a sleek, minimalist aesthetic, multi-tab booking workflows, and immersive scroll-driven animations.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Key Features
 
-## React Compiler
+- **Interactive Booking Interface:** Dynamic multi-tab reservation system with smooth transitions and persistent state controls.
+- **Advanced Scroll-Driven Animations:** Custom GSAP & ScrollTrigger integrations powering entrance fades, zoom effects, and fanning card parallax animations.
+- **Synchronized Dynamic Counters:** Real-time animated counters reflecting core business metrics (trip requests, total customers, active drivers, districts covered).
+- **Minimalist Brand Aesthetics:** Clean, modern, dark-mode-first flat design principles implemented via Tailwind CSS.
+- **Performance Optimized:** Modular architecture designed to minimize layout shifts and ensure smooth 60fps animations.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend Library:** React (Vite)
+- **Styling:** Tailwind CSS
+- **Animations:** GSAP (GreenSock Animation Platform) & ScrollTrigger
+- **Icons & Assets:** Optimized WebP imagery, custom vector graphics, and motion assets
+
+---
+
+## 📂 Project Structure
+
+```text
+src/
+├── assets/          # Brand graphics, city frames, and vehicle assets
+├── components/      # Modular UI sections (Booking forms, States, MoreThanMiles, etc.)
+├── hooks/           # Reusable custom logic (e.g., useScrollReveal for GSAP triggers)
+├── App.jsx          # Root application layout
+└── main.jsx         # Application entry point
+```

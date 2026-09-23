@@ -41,9 +41,9 @@ export default function MoreThanMilesSection() {
         cards,
         {
           // Starting state (overlapped in the middle, rotated)
-          y: (i) => (i === 1 ? 80 : 120), // Middle card slightly lower/different
-          x: (i) => (i === 0 ? 100 : i === 2 ? -100 : 0), // Left and right cards shift towards the center
-          rotation: (i) => (i === 0 ? 115 : i === 2 ? -25 : 0), // Left rotates 35 deg, Right rotates -35 deg
+          y: (i) => (i === 1 ? 80 : 120),
+          x: (i) => (i === 0 ? 100 : i === 2 ? -100 : 0),
+          rotation: (i) => (i === 0 ? 115 : i === 2 ? -25 : 0),
           scale: 0.6,
           opacity: 0.3,
         },
@@ -58,9 +58,9 @@ export default function MoreThanMilesSection() {
           ease: "power2.out",
           scrollTrigger: {
             trigger: sectionRef.current,
-            start: "top 60%", // Starts when top of section hits 70% of viewport
-            end: "bottom 90%", // Reaches original position when section center hits viewport center
-            scrub: true, // Smoothly links animation with scroll (works both ways on up/down scroll)
+            start: "top 60%",
+            end: "bottom 90%",
+            scrub: true,
           },
         },
       );

@@ -16,7 +16,7 @@ export function useScrollReveal(options = {}) {
       opacity: 1,
       duration: options.duration || 0.8,
       ease: options.ease || "power3.out",
-      delay: options.delay || 0, // <-- এখানে ডিলে যোগ করা হয়েছে
+      delay: options.delay || 0,
     };
 
     const type = options.type || "fade";
